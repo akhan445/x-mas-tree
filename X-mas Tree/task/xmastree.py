@@ -88,7 +88,7 @@ def add_trees_to_postcard(postcard, data):
 
         for x in range(len(tree)):
             for y in range(len(tree[x])):
-                if x > x + L or y > y + C - H:
+                if x + L >= 30 or y + C - H + 1 >= 50:
                     continue
                 elif tree[x][y] != " ":
                     postcard[x + L][y + C - H + 1] = tree[x][y]
